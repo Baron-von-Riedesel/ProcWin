@@ -1,0 +1,893 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "rsrc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            IDM_SELECTALL,          VIRTKEY, CONTROL, NOINVERT
+    "C",            IDM_COPY,               VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          IDM_REFRESH,            VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_PROPERTIES,         VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      IDM_EXPLORE,            VIRTKEY, CONTROL, NOINVERT
+END
+
+// accelerators for module view
+
+IDR_ACCELERATOR2 ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            IDM_IAT,                VIRTKEY, ALT, NOINVERT
+    "A",            IDM_SELECTALL,          VIRTKEY, CONTROL, NOINVERT
+    "C",            IDM_COPY,               VIRTKEY, CONTROL, NOINVERT
+    "C",            IDM_DISASM,             VIRTKEY, ALT, NOINVERT
+    "D",            IDM_DATA,               VIRTKEY, ALT, NOINVERT
+    "E",            IDM_EXPORT,             VIRTKEY, ALT, NOINVERT
+    "I",            IDM_IMPORT,             VIRTKEY, ALT, NOINVERT
+    "M",            IDM_BLOCK,              VIRTKEY, ALT, NOINVERT
+    "P",            IDM_PEHEADER,           VIRTKEY, ALT, NOINVERT
+    "R",            IDM_RES,                VIRTKEY, ALT, NOINVERT
+    "S",            IDM_SECTION,            VIRTKEY, ALT, NOINVERT
+    VK_F3,          IDM_FINDNEXT,           VIRTKEY, NOINVERT
+END
+
+IDR_ACCELERATOR3 ACCELERATORS DISCARDABLE 
+BEGIN
+    "6",            IDM_CODE16,             VIRTKEY, ALT, NOINVERT
+    "C",            IDM_DISASM,             VIRTKEY, ALT, NOINVERT
+    "D",            IDM_BLOCK,              VIRTKEY, ALT, NOINVERT
+    VK_F3,          IDM_FINDNEXT,           VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "RES\\procwin.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "RES\\TOOLBAR.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR2             CURSOR  DISCARDABLE     "RES\\Splith.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_BITMAP1 TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      IDM_REFRESH
+    BUTTON      65535
+    SEPARATOR
+    BUTTON      65535
+    BUTTON      65535
+    BUTTON      65535
+    SEPARATOR
+    BUTTON      IDM_KILL
+END
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_ABOUTTEXT           RCDATA  DISCARDABLE     "ProcWinG.rtf"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "&Aktualisieren\tF5",          IDM_REFRESH
+        MENUITEM "Speichern unter ...",         IDM_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Dll laden ...",              IDM_LOADLIBRARY
+        MENUITEM "&Programm starten ...",       IDM_STARTAPP
+        MENUITEM SEPARATOR
+        MENUITEM "Einstellungen...",            IDM_OPTIONS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden",                    IDM_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "Kopieren\tStrg+C",            IDM_COPY, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Prioritäts&klasse setzen",    IDM_SETPRIORITY
+        MENUITEM "&Prozess beenden",            IDM_KILL
+        MENUITEM "Prozess &debuggen",           IDM_DEBUGPROCESS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Thread Message posten",       IDM_THREADMSG
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        MENUITEM "&Module",                     IDM_MODULE
+        MENUITEM "&Speicherbelegung",           IDM_PROCINF
+        MENUITEM "&Heap",                       IDM_HEAP
+        MENUITEM SEPARATOR
+        MENUITEM "&Windows",                    IDM_WINDOWS
+        MENUITEM SEPARATOR
+        MENUITEM "&Aktualisieren",              IDM_LVUPDATE
+    END
+    POPUP "&Objekt"
+    BEGIN
+        MENUITEM "&Speicherdump",               IDM_VIEW
+        MENUITEM "&PE-Header",                  IDM_PEHEADER
+        MENUITEM "&Sec&tions",                  IDM_SECTION
+        MENUITEM "&Codebereich",                IDM_DISASM
+        MENUITEM "&Datenbereich",               IDM_DATA
+        MENUITEM "&Exporte",                    IDM_EXPORT
+        MENUITEM "&Importe",                    IDM_IMPORT
+        MENUITEM "&Resourcen",                  IDM_RES
+        MENUITEM "Import&adressen Tabelle (IAT)", IDM_IAT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xplore...",                 IDM_EXPLORE
+        MENUITEM SEPARATOR
+        MENUITEM "Ei&genschaften...",           IDM_PROPERTIES
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "Window &schliessen",          IDM_CLOSE
+        MENUITEM "Window &restaurieren",        IDM_ACTIVATE
+        MENUITEM "Window &verstecken",          IDM_HIDE
+        MENUITEM "Window aktivieren",           IDM_ENABLE
+        MENUITEM "FlashWindow",                 IDM_FLASH
+    END
+    POPUP "O&ptionen"
+    BEGIN
+        MENUITEM "PSAPI.DLL verwenden",         IDM_PSAPI
+        MENUITEM "Inkl. freie Speicherobjekte", IDM_INCLFREE
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "&Über ...",                   IDM_ABOUT
+    END
+END
+
+IDR_MENU2 MENU DISCARDABLE 
+BEGIN
+    POPUP "bbb"
+    BEGIN
+        MENUITEM "&Bearbeiten",                 IDM_EDIT
+        MENUITEM "&Anzeigen",                   IDM_VIEW
+        MENUITEM "&Kopieren\tStrg+C",           IDM_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "&Text speichern unter ...",   IDM_SAVETEXT
+        MENUITEM "&Speichern unter ...",        IDM_SAVEMOD
+        MENUITEM SEPARATOR
+        MENUITEM "&Byte-Format",                IDM_BYTES
+        MENUITEM "D&Word Format",               IDM_DWORDS
+        MENUITEM SEPARATOR
+        MENUITEM "S&uchen...",                  IDM_FIND
+        MENUITEM "W&eitersuchen\tF3",           IDM_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Adresse ändern...",           IDM_SETADDRESS
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "rsrc.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""windows.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 20, 20, 321, 210
+STYLE DS_LOCALEDIT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Über ProcWin"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,133,185,58,14
+    ICON            IDI_ICON1,IDC_STATIC,7,11,20,20,0,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_ABOUT,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN,33,11,275,167,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_EDITLINEDLG DIALOG DISCARDABLE  30, 30, 188, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Werte ändern an %X"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,29,57,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,99,57,50,14
+    EDITTEXT        IDC_EDIT1,14,36,158,14,ES_AUTOHSCROLL
+    CTEXT           "Warnung! Unbedachte Eingaben hier\nkönnen einen Systemabsturz verursachen.",
+                    IDC_STATIC,14,13,160,20
+END
+
+IDD_PROGRESS DIALOG DISCARDABLE  30, 30, 187, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Datei speichern"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Abbrechen",IDCANCEL,69,44,50,14
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    14,21,159,14
+END
+
+IDD_FIND DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Suchen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,19,17,150,14,ES_AUTOHSCROLL
+    CONTROL         "Eingabe als Hex Nibbles interpretieren",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,19,
+                    44,139,10
+    DEFPUSHBUTTON   "Suchen",IDOK,35,77,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,101,77,50,14
+END
+
+IDD_SETPRIORITY DIALOG DISCARDABLE  0, 0, 132, 112
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Prioritätsklasse setzen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,89,45,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,72,89,45,14
+    GROUPBOX        "Prioritätsklasse",IDC_STATIC,7,7,118,74
+    CONTROL         "Idle",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,18,22,74,
+                    10
+    CONTROL         "Normal",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,18,35,74,
+                    10
+    CONTROL         "High",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,18,48,74,
+                    10
+    CONTROL         "Real-time",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,18,61,
+                    74,10
+END
+
+IDD_ADJUSTADDRDLG DIALOG DISCARDABLE  30, 30, 152, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Adresse anpassen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,18,39,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,83,39,50,14
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,95,10,
+                    10,22
+    EDITTEXT        IDC_EDIT1,28,13,55,19,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_ADJUSTADDR2DLG DIALOG DISCARDABLE  30, 30, 117, 28
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Adresse setzen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,103,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_EDITLINEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
+    END
+
+    IDD_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_SETPRIORITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_ADJUSTADDRDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_ADJUSTADDR2DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,4,1,0
+ PRODUCTVERSION 1,4,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704b0"
+        BEGIN
+            VALUE "CompanyName", "Japheth\0"
+            VALUE "FileDescription", "Prozesse, Threads, Module anzeigen\0"
+            VALUE "FileVersion", "1, 4, 1, 0\0"
+            VALUE "InternalName", "Procwin\0"
+            VALUE "LegalCopyright", "Public Domain\0"
+            VALUE "OriginalFilename", "Procwin.exe\0"
+            VALUE "ProductName", "Procwin\0"
+            VALUE "ProductVersion", "1, 4, 1, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x407, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_EXIT                "beendet die Anwendung"
+    IDM_REFRESH             "aktualisiert die Anzeige der Prozesse"
+    IDM_ABOUT               "gibt Informationen über Version und Lizenz aus"
+    IDM_KILL                "beendet den ausgewählten Prozess"
+    IDM_QUICKVIEW           "zeigt die exportierten Funktionen eines Moduls an"
+    IDM_SAVEAS              "Speichern der Ansichten in Datei"
+    IDS_PROPSTR1            "Allgemein"
+    IDM_PROPERTIES          "Eigenschaften des Objektes anzeigen"
+    IDS_PROPSTR2            "Inhalt"
+    IDM_OPTIONS             "Benutzereinstellungen für das Programm ändern"
+    IDM_MODULE              "vom Prozess geladene Module anzeigen"
+    IDM_WINDOWS             "vom Thread generierte Windows anzeigen"
+    IDM_PROCINF             "Speicherbelegung des Prozesses anzeigen"
+    IDM_KILLTHREAD          "Beendet den ausgewählten Thread ohne weitere Rückfrage!"
+    IDM_HEAP                "Anzeige der Heaps des Prozesses"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_SAVEMOD             "speichert den gesamten Bereich als Binärdatei"
+    IDM_VIEW                "Anzeige des Objektes"
+    IDM_CLOSE               "schliesst das Fenster"
+    IDM_ACTIVATE            "restauriert ein verstecktes oder minimiertes Fenster"
+    IDM_HIDE                "macht Fenster unsichtbar"
+    IDM_LVUPDATE            "aktualisiert die Anzeige im rechten Panel"
+    IDM_DWORDS              "Anzeige als DWord"
+    IDM_BYTES               "Anzeige als Bytes"
+    IDM_PEHEADER            "zeigt die Informationen im PE Header an"
+    IDM_DISASM              "Code Section disassemblieren"
+    IDM_SAVETEXT            "speichert den Inhalt der Liste in eine Textdatei"
+    IDM_EXPORT              "Exportverzeichnis des Moduls anzeigen"
+    IDM_THREADMSG           "eine WM_USER message in die Message Queue dieses Threads posten"
+    IDM_SELECTALL           "alles auswählen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_DATA                "Data Section anzeigen"
+    IDM_COPY                "kopiert den markierten Bereich in die Zwischenablage"
+    IDM_RES                 "Resourcenverzeichnis des Moduls anzeigen"
+    IDM_IMPORT              "Importverzeichnis des Moduls anzeigen"
+    IDM_IAT                 "Import Address Table (IAT) des Moduls anzeigen"
+    IDM_EDIT                "die Werte in der markierten Zeile ändern"
+    IDM_HEXDUMP             "zeigt den vom Objekt belegten Speicherbereich an"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_FIND                "Durchsucht den aktuellen Bereich nach Vorkommen eines Textes bzw. einer Bytefolge"
+    IDM_FINDNEXT            "Nächstes Vorkommen des gesuchten Textes finden"
+    IDM_ENABLE              "erlaubt Benutzereingaben über Tastatur und Maus für dieses Fenster"
+    IDM_LOADLIBRARY         "Eine Dll zum analysieren in den ProcWin Prozess laden"
+    IDM_PSAPI               "PSAPI.DLL verwenden"
+    IDM_EXPLORE             "Datei mit Explorer untersuchen"
+    IDM_STARTAPP            "ein Programm starten"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_ABOUTTEXT           RCDATA  DISCARDABLE     "ProcWinE.rtf"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU2 MENU DISCARDABLE 
+BEGIN
+    POPUP "bbb"
+    BEGIN
+        MENUITEM "&Edit",                       IDM_EDIT
+        MENUITEM "&View",                       IDM_VIEW
+        MENUITEM "C&opy\tCtrl+C",               IDM_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "Save &text as ...",           IDM_SAVETEXT
+        MENUITEM "&Save as ...",                IDM_SAVEMOD
+        MENUITEM SEPARATOR
+        MENUITEM "&Byte Format",                IDM_BYTES
+        MENUITEM "D&Word Format",               IDM_DWORDS
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...",                    IDM_FIND
+        MENUITEM "F&ind Next\tF3",              IDM_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Set Address...",              IDM_SETADDRESS
+    END
+END
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Refresh\tF5",                IDM_REFRESH
+        MENUITEM "&Save as ...",                IDM_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "Load a &Dll ...",             IDM_LOADLIBRARY
+        MENUITEM "Run a &Program ...",          IDM_STARTAPP
+        MENUITEM SEPARATOR
+        MENUITEM "Options ...",                 IDM_OPTIONS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Copy\tCtrl+C",                IDM_COPY, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Set Priority Class",         IDM_SETPRIORITY
+        MENUITEM "&Terminate Process",          IDM_KILL
+        MENUITEM SEPARATOR
+        MENUITEM "&Post Thread Message",        IDM_THREADMSG, GRAYED
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Modules",                    IDM_MODULE
+        MENUITEM "Memory &Status",              IDM_PROCINF
+        MENUITEM "&Heap",                       IDM_HEAP
+        MENUITEM SEPARATOR
+        MENUITEM "&Windows",                    IDM_WINDOWS
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh",                    IDM_LVUPDATE
+    END
+    POPUP "&Object"
+    BEGIN
+        MENUITEM "&Memory Dump",                IDM_VIEW
+        MENUITEM "&PE Header",                  IDM_PEHEADER
+        MENUITEM "&Sections",                   IDM_SECTION
+        MENUITEM "&Code Section",               IDM_DISASM
+        MENUITEM "&Data Section",               IDM_DATA
+        MENUITEM "&Exports",                    IDM_EXPORT
+        MENUITEM "&Imports",                    IDM_IMPORT
+        MENUITEM "&Resources",                  IDM_RES
+        MENUITEM "Imp&ort Address Table",       IDM_IAT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xplore...",                 IDM_EXPLORE
+        MENUITEM SEPARATOR
+        MENUITEM "Proper&ties...",              IDM_PROPERTIES
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Close Window",               IDM_CLOSE
+        MENUITEM "&Restore Window",             IDM_ACTIVATE
+        MENUITEM "&Hide Window",                IDM_HIDE
+        MENUITEM "&Enable Window",              IDM_ENABLE
+        MENUITEM "&Flash Window",               IDM_FLASH
+    END
+    POPUP "O&ptions"
+    BEGIN
+        MENUITEM "Use PSAPI.DLL",               IDM_PSAPI
+        MENUITEM "Include free Blocks",         IDM_INCLFREE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 20, 20, 321, 210
+STYLE DS_LOCALEDIT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ProcWin"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,133,185,58,14
+    ICON            IDI_ICON1,IDC_STATIC,7,11,20,20,0,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_ABOUT,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN,33,11,275,167,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_EDITLINEDLG DIALOG DISCARDABLE  30, 30, 187, 83
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Values at %X"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,26,59,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,98,59,50,14
+    EDITTEXT        IDC_EDIT1,14,38,158,14,ES_AUTOHSCROLL
+    CTEXT           "Warning! Thoughtless editing may crash the system. You should know what you are doing.",
+                    IDC_STATIC,15,14,157,19
+END
+
+IDD_PROGRESS DIALOG DISCARDABLE  30, 30, 187, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,69,44,50,14
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    14,21,159,14
+END
+
+IDD_FIND DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,19,17,150,14,ES_AUTOHSCROLL
+    CONTROL         "Interpret user input as hex nibbles",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,19,44,139,10
+    DEFPUSHBUTTON   "Find",IDOK,35,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,77,50,14
+END
+
+IDD_SETPRIORITY DIALOG DISCARDABLE  0, 0, 132, 112
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set priority class of process"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,89,45,14
+    PUSHBUTTON      "Cancel",IDCANCEL,72,89,45,14
+    GROUPBOX        "Priority class",IDC_STATIC,7,7,118,74
+    CONTROL         "Idle",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,18,22,74,
+                    10
+    CONTROL         "Normal",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,18,35,74,
+                    10
+    CONTROL         "High",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,18,48,74,
+                    10
+    CONTROL         "Real-time",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,18,61,
+                    74,10
+END
+
+IDD_ADJUSTADDRDLG DIALOG DISCARDABLE  30, 30, 152, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Adjust Address"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,28,13,58,17,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_NOTHOUSANDS,107,13,10,22
+    DEFPUSHBUTTON   "OK",IDOK,18,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,83,39,50,14
+END
+
+IDD_ADJUSTADDR2DLG DIALOG DISCARDABLE  30, 30, 117, 28
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Address"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,103,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_EDITLINEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        VERTGUIDE, 58
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
+    END
+
+    IDD_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_SETPRIORITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_ADJUSTADDRDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_ADJUSTADDR2DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,4,4,0
+ PRODUCTVERSION 1,4,4,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704b0"
+        BEGIN
+            VALUE "CompanyName", "Japheth\0"
+            VALUE "FileDescription", "Processes, Threads, Modules\0"
+            VALUE "FileVersion", "1, 4, 4, 0\0"
+            VALUE "InternalName", "Procwin\0"
+            VALUE "LegalCopyright", "Public Domain\0"
+            VALUE "OriginalFilename", "Procwin.exe\0"
+            VALUE "ProductName", "Procwin\0"
+            VALUE "ProductVersion", "1, 4, 4, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_EXIT                "terminates the application"
+    IDM_REFRESH             "refreshes view of processes"
+    IDM_ABOUT               "displays version and license infomation"
+    IDM_KILL                "terminates selected process"
+    IDM_QUICKVIEW           "shows exported functions of a module"
+    IDM_SAVEAS              "saves actual view in a file"
+    IDS_PROPSTR1            "general"
+    IDM_PROPERTIES          "shows properties of an object"
+    IDS_PROPSTR2            "content"
+    IDM_OPTIONS             "changes user preferences for the program"
+    IDM_MODULE              "shows modules of selected process"
+    IDM_WINDOWS             "shows windows of selected thread"
+    IDM_PROCINF             "shows memory status of selected process"
+    IDM_KILLTHREAD          "terminates selected thread"
+    IDM_HEAP                "shows heaps of selected process"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_SAVEMOD             "saves whole block as binary file"
+    IDM_VIEW                "detailed view of Object"
+    IDM_CLOSE               "closes window"
+    IDM_ACTIVATE            "restores window"
+    IDM_HIDE                "hides window"
+    IDM_LVUPDATE            "refreshes listview panel only"
+    IDM_DWORDS              "shows values in DWORD format"
+    IDM_BYTES               "shows values in BYTE format"
+    IDM_PEHEADER            "shows attributes of PE header"
+    IDM_DISASM              "shows code section as disassembler listing"
+    IDM_SAVETEXT            "saves list as text file"
+    IDM_EXPORT              "shows exported directory of current module"
+    IDM_THREADMSG           "Post a WM_USER message to this thread's message queue"
+    IDM_SELECTALL           "select all"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_DATA                "shows data section of current module"
+    IDM_COPY                "copies selected lines to the clipboard"
+    IDM_RES                 "shows resource directory of current module"
+    IDM_IMPORT              "shows import directory of current module"
+    IDM_IAT                 "shows import address table of current module"
+    IDM_EDIT                "edit values in selected line"
+    IDM_HEXDUMP             "shows memory block as hex dump"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_FIND                "Scans view for specified string/byte values"
+    IDM_FINDNEXT            "Searches next instance of specified string/byte values"
+    IDM_ENABLE              "permits user input for this window"
+    IDM_LOADLIBRARY         "load a dll in ProcWin process to analyze "
+    IDM_PSAPI               "use PSAPI.DLL"
+    IDM_EXPLORE             "examine file with Explorer"
+    IDM_STARTAPP            "start a program"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
