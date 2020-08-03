@@ -56,20 +56,25 @@ PSDK=\MSSDK
 WININC=\WinInc
 
 INCS=rsrc.h ProcWin.h ModView.h Strings.h Tabwnd.h ImpDoc.h IatDoc.h CApplication.h CExplorerView.h DisasDoc.h
-CC  = $(VCDIR)\bin\cl.exe -c -nologo -W3 -ML -Fo$* $(COPTD) -D "WIN32" -D "_WINDOWS" $(LANGCC) -I $(INCDIR) -I $(VCDIR)\Include -I "$(PSDK)\Include"
-RC  = $(VCDIR)\bin\rc.exe $(LANGRC) /d AFX_TARG_NEUD /d AFX_RESOURCE_DLL /fo $*.res -i "$(PSDK)\Include"
-LIBS=kernel32.lib advapi32.lib user32.lib gdi32.lib shell32.lib comctl32.lib comdlg32.lib ole32.lib uuid.lib libc32s.lib lib32w.lib $(DISASMLIB)
-LOPT=/OUT:$*.exe /MAP:$*.map /SUBSYSTEM:WINDOWS $(LOPTD) /LIBPATH:$(LIBDIR) /MERGE:.CRT=.data
-LINK=link.exe /nologo /OPT:NOWIN98 /LIBPATH:"$(WININC)\Lib" /NODEFAULTLIB
+CC  = cl.exe -c -nologo -W3 $(COPTD) -D "WIN32" -D "_WINDOWS" -D "_CRT_SECURE_NO_WARNINGS" $(LANGCC) -I $(INCDIR)
+RC  = rc.exe $(LANGRC) /d AFX_TARG_NEUD /d AFX_RESOURCE_DLL
+LIBS=kernel32.lib advapi32.lib user32.lib gdi32.lib shell32.lib comctl32.lib comdlg32.lib ole32.lib uuid.lib lib32w.lib $(DISASMLIB)
+LOPT=/OUT:$*.exe /MAP:$*.map /SUBSYSTEM:WINDOWS $(LOPTD) /LIBPATH:$(LIBDIR)
+LINK=link.exe /nologo
+
+ALL: $(OUTDIR) $(OUTDIR)\$(name).exe
+
+$(OUTDIR):
+	@mkdir $(OUTDIR)
 
 $(OUTDIR)\$(name).exe: $(OBJMODS) $(OUTDIR)\$(name).res Makefile
 	@$(LINK) $(OBJMODS) $(OUTDIR)\$(name).res $(LIBS) $(LOPT)
 
 .cpp{$(OUTDIR)}.obj:
-	@$(CC) $<
+	@$(CC) -Fo$* $<
 
 .rc{$(OUTDIR)}.res:
-	@$(RC) $<
+	@$(RC) -fo$*.res $<
 
 $(OBJMODS): $(INCS) Makefile
 
