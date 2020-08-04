@@ -1,15 +1,9 @@
 
-# NMAKE makefile.
-# creates PROCWIN.EXE
-# use one of the following tools:
-# - MS VC v5, v6
-# - MS VisualC++ Toolkit 2003 (+ MS Platform SDK)
-# - MS VC++ Express Edition 2005
-# just compiler, linker and resource compiler are needed
+# NMAKE makefile to create PROCWIN.EXE.
+# MS Visual C++ is used.
 #
-# 3 additional libs are supplied:
-# - libc32s.lib: a small C runtime library, MSVC compatible
-# - lib32w.lib: contains some "Queue" helper functions
+# 2 additional libs are supplied:
+# - lib32w.lib: contains some "Queue" helper functions (to be removed)
 # - jdisasm.lib: import library for jdisasm.dll
 
 name = procwin
